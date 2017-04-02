@@ -31,7 +31,6 @@ public class ProjectOne {
         new Board(stdin.nextInt());
 
         for (int j=Board.getSize()-1; j >= 0; j--) {
-            System.out.println("Awaiting Input...");
             for (int i=0; i < Board.getSize(); i++) {
                 switch (stdin.next().charAt(0)) {
                     case ('B'):
