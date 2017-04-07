@@ -1,3 +1,4 @@
+package tmiles.slider;
 import java.util.ArrayList;
 
 /**
@@ -6,20 +7,20 @@ import java.util.ArrayList;
  * Agent class represents a player of the game. Agents have pieces which are initialised when the board is created.
  *
  */
-class Agent {
+public class Agent {
     private ArrayList<Piece> pieces;
     private String player; // player type, either "horizontal" or "vertical"
 
-    Agent(String player) {
+    public Agent(String player) {
         this.player = player;
         pieces = new ArrayList<>();
     }
 
-    void addPiece(Piece piece) {
+    public void addPiece(Piece piece) {
         pieces.add(piece);
     }
 
-    int calculateNumMoves() {
+    public int calculateNumMoves() {
         int numValid=0;
 
         for (Piece piece : pieces) {

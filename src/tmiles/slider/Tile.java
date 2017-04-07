@@ -1,3 +1,5 @@
+package tmiles.slider;
+
 /**
  * Created by Tom Miles (tmiles, 626263) and George Juliff (juliffg, 624946) on 1/04/2017.
  *

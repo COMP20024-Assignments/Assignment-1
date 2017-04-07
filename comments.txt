@@ -1,0 +1,83 @@
+////////////////////////////////////////////////////////////////////////////////
+                                  Comments
+////////////////////////////////////////////////////////////////////////////////
+This project has been completed in such a way that is will be easy to go on and
+expand for later parts of project and as such there is a some semi-implemented
+functionality that is not fully used.
+
+The only special libraries used are ArrayList to hold pieces, and a combination
+of InputStreamReader and Scanner to get the board into the program.
+
+The code is structured so that the scanner reads input stream from stdin to
+initialize the board.
+
+The board class contains a 2D array of Tile objects (created as scanner reads
+the configuration)
+
+Tile objects are either valid (can contain a piece) or blocked.
+
+Agents (plyers) have pieces which are also initialised when board is created.
+
+Pieces have a position (xpos,ypos) which is a reference to their location on
+the board, later when the game is implimented, moving a piece will update
+the tiles on the board effected by the move.
+
+Since pieces belong to agents (not the board) complexity of calculating number
+of valid moves for one player is O(n) where n = 3*(number of pieces), since each
+piece has 3 possible valid move directions. 
+
+////////////////////////////////////////////////////////////////////////////////
+                                  Pseudocode
+////////////////////////////////////////////////////////////////////////////////
+
+Main() {
+  new Agent vertical;
+  new Agent horizontal;
+
+  new Scanner;
+  new Board;
+
+  for(Size of board){
+    for(Size of board){
+      switch(Scanner) {
+        Case(B):
+          add blocked;
+          break;
+
+        Case(V):
+          add validTile(occupied);
+          vertical.addPiece;
+          break;
+
+        Case(H):
+          add validTile(occupied);
+          horizontal.addPiece;
+          break;
+
+        Case(+):
+          add validTile(free);
+          break;
+      }
+    }
+  }
+
+  println(horizontal.calculateNumMoves());
+  println(vertical.calculateNumMoves());
+
+}
+
+
+int calculateNumMoves() {
+        int numValid=0;
+
+        for (all pieces owned by player) {
+
+            if (up is unoccupied && on board) numValid++;
+            if (right is unoccupied && on board) numValid++;
+
+            if (player is horiz && down is unoccupied && on board) numValid++;
+            if (player is vert && left is unoccupied && on board) numValid++;
+
+        }
+        return numValid;
+    }

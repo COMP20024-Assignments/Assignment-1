@@ -1,12 +1,13 @@
+package tmiles.slider;
 /**
  * Created by Tom Miles on 1/04/2017.
  *
  * Pieces belong to Agents, currently only have the ability to check if they can move in a given direction.
  */
-class Piece {
+public class Piece {
     private int xpos, ypos;
 
-    Piece(int x, int y) {
+    public Piece(int x, int y) {
         xpos = x;
         ypos = y;
     }

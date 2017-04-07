@@ -1,3 +1,4 @@
+package tmiles.slider;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
@@ -7,7 +8,7 @@ import java.util.Scanner;
  * Will be modified to actually run the game, but for the purpose of assignment one, just read and input board from
  * stdin and calculate number of legal moves for each player
  */
-public class ProjectOne {
+public class TestMoves {
     public static void main(String[] args) {
 
         Agent vertical = new Agent("vertical");
